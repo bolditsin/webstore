@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update user</title>
+</head>
+<body>
+
+<form th:method="PATCH" th:action="@{/products/{id}(id=${product.getId()})}" th:object="${product}">
+    <label for="title">Enter title: </label>
+    <input type="text" th:field="*{title}" id="title">
+    <br/>
+    <input type="submit" value="Update product"/>
+</form>
+</body>
+</html>
